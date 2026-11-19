@@ -1,0 +1,18 @@
+# CXS-BirdNest dataset configuration (Ultralytics YOLO format)
+# Dataset DOI: https://doi.org/10.5281/zenodo.22202440
+# Repository : https://github.com/MEI11137/CXS-BirdNest
+#
+# The splits below are the ones used for every experiment reported in the paper:
+#   2,842 training images (augmented to 4,692) / 356 validation / 356 test
+#   6,148 bounding-box instances in total, single class: bird_nest
+#
+# Set `path` to the directory in which the CXS-BirdNest folders are stored.
+
+path: ../CXS-BirdNest            # dataset root
+train: train/images              # 4,692 images after offline augmentation
+val: val/images                  # 356 images, used for model selection only
+test: test/images                # 356 images, held-out test set
+
+nc: 1
+names:
+  0: bird_nest
